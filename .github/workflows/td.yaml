@@ -1,6 +1,9 @@
 name: td4
 on:
    push:
+        branches:
+        - main
+        - dev
    workflow_dispatch:
 env:
   connectionProtocol: "https"
@@ -11,3 +14,11 @@ jobs:
   test:
     environment: testing
     runs-on: ubuntu-latest
+    steps:
+      - name: Get Code
+        uses: actions/checkout@v3
+      - name: Run tests
+        run: echo "Hello World"
+      - name: Output information
+        run: |
+          echo "MONGODB_USERNAME: $MONGODB_USERNAME"
