@@ -1,0 +1,13 @@
+name: td4
+on:
+   push:
+   workflow_dispatch:
+env:
+  connectionProtocol: "https"
+  dbUser: "kadiro"
+  dbPassword: "poison"
+  clusterAddress: "https://kadiro.sbs"
+jobs:
+  test:
+    environment: testing
+    runs-on: ubuntu-latest
