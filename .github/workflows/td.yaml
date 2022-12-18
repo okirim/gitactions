@@ -21,4 +21,4 @@ jobs:
         run: echo "Hello World"
       - name: Output information
         run: |
-          echo "MONGODB_USERNAME: ${{ MONGODB_USERNAME }}"
+          echo "MONGODB_USERNAME: ${{ dbUser }}"
